@@ -17,11 +17,19 @@ export default function Cars() {
 
     return (
         <div>
-            <h2>Cars</h2>
-            <section>
-                
-            </section>
-            <div>{cars.data}</div>
+            {cars.map((element, index) => {
+                return( 
+                    <div>
+                        <div>{element.make}</div>
+                        <div>{element.model}</div>
+                        <div>{element.mileage}</div>
+                        <div>{element.engine}</div>
+                        <div>{element.price}</div>
+                        <div>{element.transmission}</div>
+                        <div>{element.year}</div>
+                    </div>
+                )
+            })}
         </div>
     )
 }
