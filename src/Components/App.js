@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Search />
       <Cars />
-      <Gallery />
+      {/* <Gallery /> */}
       <Footer />
     </div>
   );

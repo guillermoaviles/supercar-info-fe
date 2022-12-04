@@ -20,6 +20,7 @@ export default function Cars() {
             {cars.map((element) => {
                 return( 
                     <div>
+                        <img src={element.image}/>
                         <div>{element.make}</div>
                         <div>{element.model}</div>
                         <div>{element.mileage}</div>
