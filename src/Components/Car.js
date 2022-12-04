@@ -17,7 +17,7 @@ export default function Cars() {
 
     return (
         <div>
-            {cars.map((element, index) => {
+            {cars.map((element) => {
                 return( 
                     <div>
                         <div>{element.make}</div>
