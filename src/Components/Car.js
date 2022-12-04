@@ -19,7 +19,7 @@ export default function Cars() {
         <div>
             {cars.map((element) => {
                 return( 
-                    <div>
+                    <div id={element._id}>
                         <img src={element.image}/>
                         <div>{element.make}</div>
                         <div>{element.model}</div>
