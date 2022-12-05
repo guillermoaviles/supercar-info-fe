@@ -3,20 +3,22 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import axios from 'axios';
 
-export default function Cars({make, model, year, transmission, engine, price, mileage}) {
-    const [cars, setCars] = useState([]); 
-    console.log(make)
+export default function Cars({ make, searchInput, searchType, cars, searchCars, setCars, searchMake, model, year, transmission, engine, price, mileage}) {
+
+
     useEffect(() => {
-        // if (make !== '') {
-            axios.get(`http://localhost:8000/api/getsupercars/make/${make}`)
-            .then((response) => response.data)
-            .then((response) => {
-                console.log(response)
-                setCars(response) 
-            })
+        searchCars()
+        // const searchMake = () => {
+        //     axios.get(`http://localhost:8000/api/getsupercars/make/${make}`)
+        //     .then((response) => response.data)
+        //     .then((response) => {
+        //         console.log(response)
+        //         setCars(response) 
+        //     })
         // }
     }, []);
-
+    console.log(searchInput)
+    console.log(searchType)
     return (
         <div>
             {cars.map((car) => {
