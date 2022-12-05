@@ -27,7 +27,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Gallery />}/>
         <Route path='/search' element={<Search make={make} setMake={setMake} model={model} setModel={setModel} year={year} setYear={setYear} transmission={transmission} setTransmission={setTransmission} engine={engine} setEngine={setEngine} price={price} setPrice={setPrice} mileage={mileage} setMileage={setMileage}/>}/>
-        <Route path='/cars' element={<Cars make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>
+        <Route path='/cars/:make' element={<Cars make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>
+        <Route path='/cars/:make' element={<Cars make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>
       </Routes>
       <Footer />
     </div>
