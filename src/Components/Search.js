@@ -1,50 +1,35 @@
 import React from 'react'
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Search({setMake, setModel, setYear, setTransmission, setEngine, setPrice, setMileage}) {
+export default function Search({make, setMake, model, setModel, year, setYear, transmission, setTransmission, engine, setEngine, price, setPrice, mileage,setMileage}) {
 
 
   const handleMake = (event) => {
-    setMake({
-      make: event.target.document.getElementById("make").value
-    })
+    setMake(event.target.value)
   }
 
   const handleModel = (event) => {
-    setModel({
-      model: event.target.document.getElementById("model").value
-      })
+    setModel(event.target.value)
   }
 
   const handleYear = (event) => {
-    setYear({
-      year: event.target.document.getElementById("year").value
-      })
+    setYear(event.target.value)
   }
 
   const handleTransmission = (event) => {
-    setTransmission({
-      transmission: event.target.document.getElementById("transmission").value
-      })
+    setTransmission(event.target.value)
   }
 
   const handleEngine = (event) => {
-    setEngine({
-      engine: event.target.document.getElementById("engine").value
-      })
+    setEngine(event.target.value)
   }
 
   const handlePrice = (event) => {
-    setPrice({
-      price: event.target.document.getElementById("price").value
-      })
+    setPrice(event.target.value)
   }
 
   const handleMileage = (event) => {
-    setMileage({
-      mileage: event.target.document.getElementById("mileage").value
-      })
+    setMileage(event.target.value)
   }
 
 
@@ -54,25 +39,25 @@ export default function Search({setMake, setModel, setYear, setTransmission, set
         <h2>Looking for something specific? Search below:</h2>
         <div>
           <input type="text" id="make" placeholder='make' onChange={handleMake}></input>
-          <Link to = '/car'>
+          <Link to = {`/cars/${make}`}>
                 <h1>Search</h1>
           </Link>
         </div>
         <div>
           <input type="text" id="model" placeholder='model' onChange={handleModel}></input>
-          <Link to = '/car'>
+          <Link to = {`/cars/${model}`}>
                 <h1>Search</h1>
           </Link>
         </div>
         <div>
           <input type="text" id="year" placeholder='year' onChange={handleYear}></input>
-          <Link to = '/car'>
+          <Link to = {`/cars/${year}`}>
                 <h1>Search</h1>
           </Link>
         </div>
         <div>
           <input type="text" id="engine" placeholder='engine' onChange={handleEngine}></input>
-          <Link to = '/car'>
+          <Link to = {`/cars/${engine}`}>
                 <h1>Search</h1>
           </Link>
         </div>
@@ -82,7 +67,7 @@ export default function Search({setMake, setModel, setYear, setTransmission, set
               <option value="automatic">Automatic</option>
               <option value="manual">Manual</option>
               </select>
-        <Link to = '/car'>
+        <Link to = {`/cars/${transmission}`}>
                 <h1>Search</h1>
         </Link>
        </div>
@@ -94,7 +79,7 @@ export default function Search({setMake, setModel, setYear, setTransmission, set
               <option value="150to250">$150,000 - $250,000</option>
               <option value="250up">$250,000 +</option>
               </select>
-        <Link to = '/car'>
+        <Link to = {`/cars/${price}`}>
                 <h1>Search</h1>
         </Link>
        </div>
@@ -106,7 +91,7 @@ export default function Search({setMake, setModel, setYear, setTransmission, set
               <option value="51to80">51,000 - 80,000</option>
               <option value="81up">81,000 +</option>
               </select>
-        <Link to = '/cars'>
+        <Link to = {`/cars/${mileage}`}>
                 <h1>Search</h1>
         </Link>
       </div>
