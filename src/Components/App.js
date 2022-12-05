@@ -7,9 +7,11 @@ import Footer from './Footer';
 import Cars from './Cars';
 import { Route, Routes } from 'react-router-dom';
 import { useState } from "react";
+import FetchCalls from './Fetch/FetchCalls';
 
 function App() {
 
+  const [cars, setCars] = useState([]); 
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
@@ -25,6 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route path='/router' element={<FetchCalls /> } />
         <Route path='/' element={<Gallery />}/>
         <Route path='/search' element={<Search make={make} setMake={setMake} model={model} setModel={setModel} year={year} setYear={setYear} transmission={transmission} setTransmission={setTransmission} engine={engine} setEngine={setEngine} price={price} setPrice={setPrice} mileage={mileage} setMileage={setMileage}/>}/>
         <Route path='/:make/:model' element={<Cars make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>

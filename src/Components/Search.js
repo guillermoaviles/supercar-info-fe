@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import FetchCalls from './Fetch/FetchCalls';
 
 export default function Search({make, setMake, model, setModel, year, setYear, transmission, setTransmission, engine, setEngine, price, setPrice, mileage,setMileage}) {
 
@@ -7,6 +8,8 @@ export default function Search({make, setMake, model, setModel, year, setYear, t
   const handleMake = (event) => {
     setMake(event.target.value)
   }
+
+
 
   const handleModel = (event) => {
     setModel(event.target.value)
@@ -39,7 +42,7 @@ export default function Search({make, setMake, model, setModel, year, setYear, t
         <h2>Looking for something specific? Search below:</h2>
         <div>
           <input type="text" id="make" placeholder='make' onChange={handleMake}></input>
-          <Link to = {`/cars/${make}`}>
+          <Link to = {`/cars/${make}`} onClick={searchMake}>
                 <h1>Search</h1>
           </Link>
         </div>
