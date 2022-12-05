@@ -42,7 +42,7 @@ export default function Search({make, setMake, model, setModel, year, setYear, t
         <h2>Looking for something specific? Search below:</h2>
         <div>
           <input type="text" id="make" placeholder='make' onChange={handleMake}></input>
-          <Link to = {`/cars/${make}`} onClick={searchMake}>
+          <Link to = {`/cars/${make}`} >
                 <h1>Search</h1>
           </Link>
         </div>
