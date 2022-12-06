@@ -16,10 +16,11 @@ export default function Cars() {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             {cars.map((element) => {
                 return( 
                     <div id={element._id}>
+                        <div className="carbox">
                         <img src={element.image}/>
                         <div>{element.make}</div>
                         <div>{element.model}</div>
@@ -28,6 +29,7 @@ export default function Cars() {
                         <div>{element.price}</div>
                         <div>{element.transmission}</div>
                         <div>{element.year}</div>
+                    </div>
                     </div>
                 )
             })}
