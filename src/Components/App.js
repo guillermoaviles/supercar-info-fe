@@ -25,7 +25,7 @@ function App() {
 
 
   const searchCars = () => {
-    axios.get(`http://localhost:8000/api/getsupercars/${searchType}/${searchInput}`)
+    axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput}`)
     .then((response) => response.data)
     .then((response) => {
         console.log(response)
