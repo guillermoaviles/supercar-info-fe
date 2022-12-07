@@ -7,7 +7,7 @@ export default function Cars() {
     const [cars, setCars] = useState([]); 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/getsupercars')
+        axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput})`
           .then((response) => response.data)
           .then((response) => {
             console.log(response)
