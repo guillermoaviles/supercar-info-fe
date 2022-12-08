@@ -4,10 +4,10 @@ import Header from './Header';
 import Search from './Search';
 import Gallery from './Gallery';
 import Footer from './Footer';
-import Cars from './Cars';
+import Cars from './Car';
 import { Route, Routes } from 'react-router-dom';
 import { useState } from "react";
-import FetchCalls from './Fetch/FetchCalls';
+// import FetchCalls from './Fetch/FetchCalls';
 import axios from 'axios';
 
 function App() {

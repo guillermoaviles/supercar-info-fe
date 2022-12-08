@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import axios from 'axios';
 
-export default function Cars() {
+export default function Cars({searchInput, searchType}) {
     const [cars, setCars] = useState([]); 
 
     useEffect(() => {
-        axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput})`
+        axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput}`)
           .then((response) => response.data)
           .then((response) => {
             console.log(response)
