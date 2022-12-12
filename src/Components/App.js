@@ -25,7 +25,7 @@ function App() {
 
 
   const searchCars = () => {
-    axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput}`)
+    axios.get(`https://supercar-be.fly.dev/api/getsupercars/`)
     .then((response) => response.data)
     .then((response) => {
         console.log(response)
@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Gallery />}/>
+        <Route path='/' element={<Gallery cars={cars}/>}/>
         <Route path='/search' element={<Search make={make} searchInput={searchInput} setSearchType={setSearchType} setSearchInput={setSearchInput} setMake={setMake} model={model} setModel={setModel} year={year} setYear={setYear} transmission={transmission} setTransmission={setTransmission} engine={engine} setEngine={setEngine} price={price} setPrice={setPrice} mileage={mileage} setMileage={setMileage}/>}/>
         <Route path='/:make/:model' element={<Cars make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>
         <Route path='/cars/:make' element={<Cars cars={cars} searchCars={searchCars} searchInput={searchInput} searchType={searchType} make={make} model={model} year={year} transmission={transmission} engine={engine} price={price} mileage={mileage}/>}/>
