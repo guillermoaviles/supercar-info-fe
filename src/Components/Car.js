@@ -1,38 +1,23 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useParams } from "react-router-dom";
+import cars from '../SampleData/cars.json'
 
-export default function Cars({searchInput, searchType}) {
-    const [cars, setCars] = useState([]); 
+export default function Car() {
+    const car  = useParams();
 
-    useEffect(() => {
-        axios.get(`https://supercar-be.fly.dev/api/getsupercars/${searchType}/${searchInput}`)
-          .then((response) => response.data)
-          .then((response) => {
-            console.log(response)
-            setCars(response) 
-          })
-    }, []);
+    const carFound = cars.find(carToFind => carToFind.make === car.make);
 
+    console.log(carFound)
     return (
-        <div className="container">
-            {cars.map((element) => {
-                return( 
-                    <div id={element._id}>
-                        <div className="carbox">
-                        <img src={element.image}/>
-                        <div>{element.make}</div>
-                        <div>{element.model}</div>
-                        <div>{element.mileage}</div>
-                        <div>{element.engine}</div>
-                        <div>{element.price}</div>
-                        <div>{element.transmission}</div>
-                        <div>{element.year}</div>
-                    </div>
-                    </div>
-                )
-            })}
+        <div>
+            <img src={carFound.image}/>
+            <div>{carFound.make}</div>
+            <div>{carFound.model}</div>
+            <div>{carFound.mileage}</div>
+            <div>{carFound.engine}</div>
+            <div>{carFound.price}</div>
+            <div>{carFound.transmission}</div>
+            <div>{carFound.year}</div>
         </div>
     )
 }

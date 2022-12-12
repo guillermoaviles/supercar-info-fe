@@ -5,8 +5,9 @@ export default function Header() {
   return (
     <div>
         <nav>
-            <Link to='/'>SuperCars!</Link>
-            <Link to='/search'>Search</Link>
+            <Link to='/'>
+              <h1>SuperCars!</h1>
+            </Link>
         </nav>
     </div>
   )
