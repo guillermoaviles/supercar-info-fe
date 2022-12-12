@@ -33,11 +33,6 @@ function App() {
     })
 }
 
-
-  console.log(searchInput)
-  console.log(searchType)
-  console.log(cars)
-
   return (
     <div className="App">
       <Header />

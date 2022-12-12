@@ -6,7 +6,7 @@ export default function Cars({cars, searchCars}) {
     useEffect(() => {
         searchCars()
     }, []);
-    console.log(cars)
+    // console.log(cars)
     // console.log(searchType)
     return (
         <div>

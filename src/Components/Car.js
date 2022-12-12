@@ -7,7 +7,6 @@ export default function Car() {
 
     const carFound = cars.find(carToFind => carToFind.make === car.make && carToFind.model === car.model);
 
-    console.log(carFound)
     return (
         <div>
             <img src={carFound.image}/>

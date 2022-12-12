@@ -62,7 +62,7 @@ export default function Search({make, searchInput,  setSearchInput, setSearchTyp
 
 
   return (
-    <div>
+    <div className='searchContainer'>
         <h1>Welcome to SuperCars!</h1>
         <h2>Looking for something specific? Search below:</h2>
         <div>
@@ -83,7 +83,7 @@ export default function Search({make, searchInput,  setSearchInput, setSearchTyp
                 <h1>Search</h1>
           </Link>
         </div>
-        <div>
+        {/* <div>
           <input type="text" id="engine" placeholder='engine' onChange={handleEngine}></input>
           <Link to = {`/cars/${searchInput}`} onClick={handleTypeEngine}>
                 <h1>Search</h1>
@@ -122,7 +122,7 @@ export default function Search({make, searchInput,  setSearchInput, setSearchTyp
         <Link to = {`/cars/${searchInput}`} onClick={handleTypeMileage}>
                 <h1>Search</h1>
         </Link>
-      </div>
+      </div> */}
     </div>
   )
 }
