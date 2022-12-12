@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import cars from '../SampleData/cars.json'
 
 export default function Gallery() {
+    console.log(cars)
   return (
     <div>
         <Link to = '/search'>
