@@ -39,7 +39,7 @@
 
 img {
   height: 300px;
-  width: 400px;
+  width: auto;
 }
 div {
   font-size: 25px;
