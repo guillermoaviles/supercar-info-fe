@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
-import axios from 'axios';
 
 export default function Search({make, searchInput,  setSearchInput, setSearchType, setCars, searchMake, setMake, model, setModel, year, setYear, transmission, setTransmission, engine, setEngine, price, setPrice, mileage,setMileage}) {
 

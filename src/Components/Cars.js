@@ -1,24 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 
-export default function Cars({ make, searchInput, searchType, cars, searchCars, setCars, searchMake, model, year, transmission, engine, price, mileage}) {
+export default function Cars({cars, searchCars}) {
 
 
     useEffect(() => {
         searchCars()
-        // const searchMake = () => {
-        //     axios.get(`http://localhost:8000/api/getsupercars/make/${make}`)
-        //     .then((response) => response.data)
-        //     .then((response) => {
-        //         console.log(response)
-        //         setCars(response) 
-        //     })
-        // }
     }, []);
-    console.log(searchInput)
-    console.log(searchType)
+    console.log(cars)
+    // console.log(searchType)
     return (
         <div>
             {cars.map((car) => {
