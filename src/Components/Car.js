@@ -5,7 +5,7 @@ import cars from '../SampleData/cars.json'
 export default function Car() {
     const car  = useParams();
 
-    const carFound = cars.find(carToFind => carToFind.make === car.make);
+    const carFound = cars.find(carToFind => carToFind.make === car.make && carToFind.model === car.model);
 
     console.log(carFound)
     return (
